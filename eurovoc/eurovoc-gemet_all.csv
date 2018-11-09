@@ -1,0 +1,2 @@
+id,match_type,similarity,similarity_offset,vec_sim,hybrid_sim,levenshtein,stoilos,fuzzy_score,metriclcs,tfidf_cosine,dice,monge_elkan,parent_overlap,children_overlap,avg_context_overlap,prefix_overlap,suffix_overlap,context_string_overlap,context_string_overlap_offset,has_parents,has_children,depth_difference,class
+EUROVOC-2738-GEMET-5778,Type4,0.2642,-0.1424,0.1463,0.1463,0.2632,0,0.0364,0.3158,0,0,0.4564,0.5284,0,0.1761,0.0,0.0,0.5284,0,both,none,0.0,N

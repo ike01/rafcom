@@ -1,0 +1,83 @@
+@relation test
+
+@attribute id {101-Publisher-304-Publisher,101-Part-304-Part,101-Institution-304-Institution,101-Misc-304-Misc,101-Journal-304-Journal,101-Proceedings-304-Proceedings,101-Academic-304-Academic,101-Report-304-TechReport,101-PhdThesis-304-PhdThesis,101-Informal-304-Informal,101-Manual-304-Manual,101-LectureNotes-304-LectureNotes,101-PersonList-304-PersonList,101-TechReport-304-TechReport,101-Deliverable-304-Deliverable,101-List-304-List,101-Chapter-304-Chapter,101-Unpublished-304-Unpublished,101-School-304-School,101-Collection-304-Collection,101-Organization-304-Organization,101-Article-304-Article,101-Person-304-Person,101-Booklet-304-Booklet,101-Date-304-Date,101-MastersThesis-304-MastersThesis,101-Monograph-304-Monography,101-PageRange-304-PageRange,101-InProceedings-304-InProceedings,101-Book-304-Book,101-InBook-304-InBook,101-MotionPicture-304-MotionPicture,101-InCollection-304-InCollection,101-Publisher-304-Thesis,101-Institution-304-Entry,101-Reference-304-Informal,101-Proceedings-304-Collection,101-Academic-304-Thesis,101-Report-304-Informal,101-PhdThesis-304-Thesis,101-Informal-304-Academic,101-LectureNotes-304-Manual,101-TechReport-304-Book,101-Deliverable-304-Book,101-Chapter-304-InProceedings,101-Unpublished-304-Manual,101-School-304-Thesis,101-Organization-304-Entry,101-Article-304-InProceedings,101-Booklet-304-Manual,101-MastersThesis-304-Thesis,101-Monograph-304-Collection,101-Book-304-Composite,101-InBook-304-InProceedings,101-InCollection-304-InProceedings}
+@attribute match_type {Type1,Type2,Type3,Type4}
+@attribute similarity numeric
+@attribute similarity_offset numeric
+@attribute vec_sim numeric
+@attribute hybrid_sim numeric
+@attribute levenshtein numeric
+@attribute stoilos numeric
+@attribute fuzzy_score numeric
+@attribute metriclcs numeric
+@attribute tfidf_cosine numeric
+@attribute dice numeric
+@attribute monge_elkan numeric
+@attribute parent_overlap numeric
+@attribute children_overlap numeric
+@attribute avg_context_overlap numeric
+@attribute prefix_overlap numeric
+@attribute suffix_overlap numeric
+@attribute context_string_overlap numeric
+@attribute context_string_overlap_offset numeric
+@attribute has_parents {both,one,none}
+@attribute has_children {both,one,none}
+@attribute depth_difference numeric
+@attribute class {N,Y}
+
+@data
+101-Publisher-304-Publisher,Type1,1,0.0424,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,-0.0919,one,none,0,Y
+101-Part-304-Part,Type1,1,0.1667,1,1,1,1,1,1,1,1,1,0.2582,1,0.7527,1,1,0.7661,0.519,both,both,0,Y
+101-Institution-304-Institution,Type1,1,0.549,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,0,one,one,0.333333,Y
+101-Misc-304-Misc,Type1,1,0.7161,1,1,1,1,1,1,1,1,1,0.1261,0,0.2199,1,1,0.1261,0,both,none,0,Y
+101-Journal-304-Journal,Type1,1,0.4575,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,none,none,0,Y
+101-Proceedings-304-Proceedings,Type1,1,0.0417,1,1,1,1,1,1,1,1,1,0,0,0.1652,1,1,0,-0.0434,both,none,0,Y
+101-Academic-304-Academic,Type1,1,0.5092,1,1,1,1,1,1,1,1,1,0.2582,0.6672,0.6418,1,1,0.5811,0.5811,both,both,0,Y
+101-Report-304-TechReport,Type1,0.875,0.3902,0.5337,0.5337,0.5455,0.875,0.0323,0.5455,0.7071,0.6154,0.7906,0.1261,0,0.3754,0,1,0.1082,-0.0902,both,one,0.333333,N
+101-PhdThesis-304-PhdThesis,Type1,1,0.1,1,1,1,1,1,1,0.9978,1,1,0.2812,0,0.4271,1,1,0.2812,-0.117,both,none,0,Y
+101-Informal-304-Informal,Type1,1,0.7723,1,1,1,1,1,1,1,1,1,0.2582,1,0.7527,1,1,0.6062,0.4674,both,both,0,Y
+101-Manual-304-Manual,Type1,1,0.5,1,1,1,1,1,1,1,1,1,1,0,0.6667,1,1,1,0,both,none,0,Y
+101-LectureNotes-304-LectureNotes,Type1,1,0.6967,1,1,1,1,1,1,1,1,1,1,0,0.6667,1,1,0.5795,0.5795,both,none,0,Y
+101-PersonList-304-PersonList,Type1,1,0.2143,1,1,1,1,1,1,1,1,1,1,0,0.3333,1,1,1,0.4641,both,none,0,Y
+101-TechReport-304-TechReport,Type1,1,0.7256,1,1,1,1,1,1,0.9943,1,1,0.1275,0,0.3758,1,1,0.1275,-0.0799,both,none,0,Y
+101-Deliverable-304-Deliverable,Type1,1,0.7563,1,1,1,1,1,1,1,1,1,0.1275,0,0.3758,1,1,0.1275,-0.0118,both,none,0,Y
+101-List-304-List,Type1,1,0.2143,1,1,1,1,1,1,1,1,1,0,1,0.3333,1,1,1,0.4641,none,both,0,N
+101-Chapter-304-Chapter,Type1,1,0.5834,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0.1705,0.1178,one,one,0.5,N
+101-Unpublished-304-Unpublished,Type1,1,0.05,1,1,1,1,1,1,1,1,1,1,0,0.6667,1,1,1,0.9025,both,none,0,Y
+101-School-304-School,Type1,1,0.5092,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,-0.09,one,none,0,Y
+101-Collection-304-Collection,Type1,1,0.0455,1,1,1,1,1,1,1,1,1,1,0,0.6333,1,1,1,0.5834,both,none,0,Y
+101-Organization-304-Organization,Type1,1,0.549,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,0,none,one,0.666667,N
+101-Article-304-Article,Type1,1,0.5206,1,1,1,1,1,1,1,1,1,1,0,0.6667,1,1,0.5328,0.2882,both,none,0,Y
+101-Person-304-Person,Type1,1,0.075,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,none,none,0,N
+101-Booklet-304-Booklet,Type1,1,0.0818,1,1,1,1,1,1,1,1,1,1,0,0.6667,1,1,1,0.938,both,none,0,Y
+101-Date-304-Date,Type1,1,0.1588,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,0,none,one,0.5,Y
+101-MastersThesis-304-MastersThesis,Type1,1,0.3296,1,1,1,1,1,1,0.9978,1,1,0.2812,0,0.4271,1,1,0.2812,0,both,none,0,Y
+101-Monograph-304-Monography,Type1,0.9842,0.4886,0,0.9,0.9,0.9842,0.8929,0.9,0,0.9333,1,1,0,0.6667,1,0,1,0.8481,both,none,0,Y
+101-PageRange-304-PageRange,Type1,1,0.6914,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,none,none,0,Y
+101-InProceedings-304-InProceedings,Type1,1,0.0417,1,1,1,1,1,1,1,1,1,1,0,0.6667,1,1,1,0.9687,both,none,0,Y
+101-Book-304-Book,Type1,1,0.1,1,1,1,1,1,1,1,1,1,0.2256,1,0.5824,1,1,0.622,0.4253,both,both,0.083333,Y
+101-InBook-304-InBook,Type1,1,0.3104,1,1,1,1,1,1,0.9972,1,1,0.1365,0,0.3788,1,1,0.1365,-0.3963,both,none,0,Y
+101-MotionPicture-304-MotionPicture,Type1,1,0.7788,1,1,1,1,1,1,1,1,1,0.2582,0,0.4194,1,1,0.2582,0.0598,both,none,0,Y
+101-InCollection-304-InCollection,Type1,1,0.3899,1,1,1,1,1,1,1,1,1,0.1365,0,0.3788,1,1,0.1365,0,both,none,0,Y
+101-Publisher-304-Thesis,Type4,0.2055,0,0.0915,0.0915,0.2222,0,0,0.2222,0,0,0.3333,0.411,0,0.1618,0,0,0.2208,-0.0455,both,one,0.25,N
+101-Institution-304-Entry,Type4,0.2454,0.0234,0.0351,0.0351,0.1818,0,0,0.1818,0,0,0.3,0,0.4908,0.1636,0,0,0.2143,-0.0327,one,both,0.166667,N
+101-Reference-304-Informal,Type4,0.5,0,0.1261,0.1261,0.2222,0,0,0.2222,0,0,0.125,0,1,0.3333,0,0,0.4224,0.0043,one,both,0.166667,N
+101-Proceedings-304-Collection,Type4,0.5,0,0.0716,0.0716,0.1818,0,0.0323,0.3636,0,0,0.15,1,0,0.6333,0,0,1,0,both,none,0,N
+101-Academic-304-Thesis,Type4,0.5454,-0.4546,0.2812,0.2812,0.25,0,0,0.25,0,0,0.1667,0.0907,1,0.463,0,0,0.8562,0.2752,both,both,0.083333,N
+101-Report-304-Informal,Type4,0.6291,0.3628,0.1275,0.1275,0.25,0,0,0.25,0,0,0.3333,0.2582,1,0.7527,0,0,0.4487,0.2074,both,both,0,N
+101-PhdThesis-304-Thesis,Type4,0.9,0.4,0.6672,0.6672,0.6,0.9,0.5714,0.6,0.6278,0.6667,0.8165,1,0,0.4238,0,1,0.3982,-0.1813,both,one,0.25,N
+101-Informal-304-Academic,Type4,0.6291,-0.3709,0.159,0.159,0.125,0,0.0455,0.125,0,0,0.125,0.2582,1,0.7527,0,0,0.5008,-0.1053,both,both,0,N
+101-LectureNotes-304-Manual,Type4,0.5,0,0.0729,0.0729,0.0769,0,0,0.0769,0,0,0.1915,1,0,0.6667,0,0,1,0,both,none,0,N
+101-TechReport-304-Book,Type4,0.2074,-0.0671,0.1291,0.1291,0.0909,0,0,0.0909,0,0,0.1768,0.4148,0,0.1528,0,0,0.1588,-0.0486,both,one,0.25,N
+101-Deliverable-304-Book,Type4,0.2074,0,0.0332,0.0332,0,0,0.0323,0.0909,0,0,0.25,0.4148,0,0.2297,0,0,0.1588,-0.0486,both,one,0.25,N
+101-Chapter-304-InProceedings,Type4,0.5,0,0.1288,0.1288,0.1429,0,0,0.1429,0,0,0.101,1,0,0.6667,0,0,1,0.4672,both,none,0,N
+101-Unpublished-304-Manual,Type4,0.5,0,0.1619,0.1619,0.1818,0,0,0.2727,0,0,0.25,1,0,0.6667,0,0,1,0,both,none,0,N
+101-School-304-Thesis,Type4,0.2055,0,0.1049,0.1049,0,0,0,0.1667,0,0,0.1667,0.411,0,0.1691,0,0,0.2208,-0.0455,both,one,0.25,N
+101-Organization-304-Entry,Type4,0.2055,0.1128,0.0628,0.0628,0.1667,0,0,0.1667,0,0,0.2,0,0.411,0.137,0,0,0.1312,-0.0896,none,both,0.166667,N
+101-Article-304-InProceedings,Type4,0.5,-0.5,0.0596,0.0596,0.1429,0,0.025,0.2143,0,0,0.4226,1,0,0.5437,0,0,1,0.4672,both,none,0,N
+101-Booklet-304-Manual,Type4,0.5,0,0.3413,0.3413,0,0,0,0.1429,0,0,0.1667,1,0,0.6667,0,0,1,0,both,none,0,N
+101-MastersThesis-304-Thesis,Type4,0.8158,0.3158,0.6564,0.6564,0.4286,0.8158,0.35,0.4286,0.6278,0.5,0.8165,1,0,0.4238,0,1,0.3982,-0.1813,both,one,0.25,N
+101-Monograph-304-Collection,Type4,0.5,-0.4842,0.2977,0.2977,0.1,0,0,0.2,0,0,0.2222,1,0,0.3333,0,0,1,0,both,none,0,N
+101-Book-304-Composite,Type4,0.6291,-0.3709,0,0,0.2222,0,0,0.2222,0,0,0.25,0.2582,1,0.7527,0,0,0.4935,-0.1285,both,both,0,N
+101-InBook-304-InProceedings,Type4,0.5516,0.0516,0.5516,0.5516,0.2857,0.15,0.175,0.2857,0.4264,0.1176,0.7906,1,0,0.6667,0.428571,0,1,0.4672,both,none,0,N
+101-InCollection-304-InProceedings,Type4,0.5516,0.0516,0.5516,0.5516,0.3571,0.15,0.175,0.5,0.4264,0.087,0.9354,1,0,0.6667,0.230769,0,1,0.4672,both,none,0,N

@@ -1,0 +1,7 @@
+/target
+/RDFSource
+/TDBStore
+/src/main/resources/app.properties
+**/logs
+*.log
+/*.csv

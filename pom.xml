@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>uk.rgu.data.rafcom</groupId>
+  <artifactId>rafcom</artifactId>
+  <version>1.0-alpha</version>
+  <packaging>jar</packaging>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <!-- ND4J backend. You need one in every DL4J project. Normally define artifactId as either "nd4j-native-platform" OR "nd4j-cuda-7.5-platform" or "nd4j-cuda-8.0-platform" -->
+    <nd4j.backend>nd4j-native-platform</nd4j.backend>
+    <nd4j.version>0.7.2</nd4j.version>
+    <dl4j.version>0.7.2</dl4j.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.nd4j</groupId>
+      <artifactId>${nd4j.backend}</artifactId>
+      <version>${nd4j.version}</version>
+    </dependency>
+    <!-- Core DL4J functionality -->
+    <dependency>
+      <groupId>org.deeplearning4j</groupId>
+      <artifactId>deeplearning4j-ui_2.11</artifactId>
+      <version>${dl4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.deeplearning4j</groupId>
+      <artifactId>deeplearning4j-nlp</artifactId>
+      <version>${dl4j.version}</version>
+    </dependency>
+    <!--Apache Jena-->
+    <dependency>
+      <groupId>org.apache.jena</groupId>
+      <artifactId>apache-jena-libs</artifactId>
+      <version>2.12.1</version>
+      <type>pom</type>
+    </dependency>
+    <!--Stanford NLP Tools-->
+    <dependency>
+      <groupId>edu.stanford.nlp</groupId>
+      <artifactId>stanford-corenlp</artifactId>
+      <version>3.7.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>xml-apis</artifactId>
+          <groupId>xml-apis</groupId>
+        </exclusion>
+      </exclusions>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>edu.stanford.nlp</groupId>
+      <artifactId>stanford-corenlp</artifactId>
+      <version>3.7.0</version>
+      <classifier>models</classifier>
+    </dependency>
+    <!--Apache Lucene-->
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>4.10.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-analyzers-common</artifactId>
+      <version>4.10.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-queryparser</artifactId>
+      <version>4.10.2</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-math3</artifactId>
+      <version>3.1.1</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>18.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.4</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tika</groupId>
+      <artifactId>tika-parsers</artifactId>
+      <version>1.8</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-httpclient</groupId>
+      <artifactId>commons-httpclient</artifactId>
+      <version>3.1</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>1.7.2</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.34</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.0.3.RELEASE</version>
+      <type>jar</type>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-stable -->
+    <dependency>
+      <groupId>nz.ac.waikato.cms.weka</groupId>
+      <artifactId>weka-stable</artifactId>
+      <version>3.8.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/tw.edu.ntu.csie/libsvm -->
+    <dependency>
+      <groupId>tw.edu.ntu.csie</groupId>
+      <artifactId>libsvm</artifactId>
+      <version>3.17</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
+      <type>jar</type>
+    </dependency>
+
+    <!--    <dependency>
+      <groupId>org.atteo</groupId>
+      <artifactId>evo-inflector</artifactId>
+      <version>1.2.2</version>
+    </dependency>-->
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+    </dependency>
+    <!--    <dependency>
+      <groupId>edu.stanford.nlp</groupId>
+      <artifactId>corenlp-jmwe</artifactId>
+      <version>3.7.0</version>
+    </dependency>-->
+    <!--    <dependency>
+      <groupId>edu.mit</groupId>
+      <artifactId>edu.mit.jmwe</artifactId>
+      <version>1.0.2</version>
+    </dependency>-->
+
+    <!-- https://mvnrepository.com/artifact/de.sciss/jawjaw -->
+    <dependency>
+      <groupId>de.sciss</groupId>
+      <artifactId>jawjaw</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/de.sciss/ws4j -->
+    <dependency>
+      <groupId>de.sciss</groupId>
+      <artifactId>ws4j</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+    <!--String comparison https://github.com/tdebatty/java-string-similarity-->
+    <dependency>
+      <groupId>info.debatty</groupId>
+      <artifactId>java-string-similarity</artifactId>
+      <version>0.24</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.github.mpkorstanje/simmetrics-core -->
+    <dependency>
+      <groupId>com.github.mpkorstanje</groupId>
+      <artifactId>simmetrics-core</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-text -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-text</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+
+    <!--Libraries for (and used by) Alignment API. Some may have newer versions!-->
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=align -Dpackaging=jar -Dversion=4.8 -Dfile=align.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>align</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=alignsvc -Dpackaging=jar -Dversion=4.8 -Dfile=alignsvc.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>alignsvc</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=ontowrap -Dpackaging=jar -Dversion=4.8 -Dfile=ontowrap.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>ontowrap</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=procalign -Dpackaging=jar -Dversion=4.8 -Dfile=procalign.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>procalign</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=hermit -Dpackaging=jar -Dversion=4.8 -Dfile=hermit\hermit.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>hermit</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=iddl -Dpackaging=jar -Dversion=4.8 -Dfile=iddl\iddl.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>iddl</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=jade -Dpackaging=jar -Dversion=4.8 -Dfile=jade\jade.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>jade</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=jwnl -Dpackaging=jar -Dversion=4.8 -Dfile=jwnl\jwnl.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>jwnl</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=ontosim -Dpackaging=jar -Dversion=4.8 -Dfile=ontosim\ontosim.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>ontosim</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=osgi-core -Dpackaging=jar -Dversion=4.8 -Dfile=osgi\osgi-core.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>osgi-core</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=owlapi10-api -Dpackaging=jar -Dversion=4.8 -Dfile=owlapi10\api.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>owlapi10-api</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=owlapi10-impl -Dpackaging=jar -Dversion=4.8 -Dfile=owlapi10\impl.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>owlapi10-impl</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=owlapi10-io -Dpackaging=jar -Dversion=4.8 -Dfile=owlapi10\io.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>owlapi10-io</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=owlapi10-rdfapi -Dpackaging=jar -Dversion=4.8 -Dfile=owlapi10\rdfapi.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>owlapi10-rdfapi</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=owlapi10-rdfparser -Dpackaging=jar -Dversion=4.8 -Dfile=owlapi10\rdfparser.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>owlapi10-rdfparser</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=owlapi30-owlapi-bin -Dpackaging=jar -Dversion=4.8 -Dfile=owlapi30\owlapi-bin.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>owlapi30-owlapi-bin</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=oyster -Dpackaging=jar -Dversion=4.8 -Dfile=oyster\oyster.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>oyster</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=skosapi -Dpackaging=jar -Dversion=4.8 -Dfile=skosapi\skosapi.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>skosapi</artifactId>
+      <version>4.8</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=slf4j-api -Dpackaging=jar -Dversion=0.1.0 -Dfile=slf4j\slf4j-api.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=log4j-over-slf4j -Dpackaging=jar -Dversion=0.1.0 -Dfile=slf4j\log4j-over-slf4j.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>log4j-over-slf4j</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=jcl-over-slf4j -Dpackaging=jar -Dversion=0.1.0 -Dfile=slf4j\jcl-over-slf4j.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=commons-cli -Dpackaging=jar -Dversion=0.1.0 -Dfile=cli\commons-cli.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>commons-cli</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=commons-fileupload -Dpackaging=jar -Dversion=0.1.0 -Dfile=fileupload\commons-fileupload.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=resolver -Dpackaging=jar -Dversion=0.1.0 -Dfile=xerces\resolver.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>resolver</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=xercesImpl -Dpackaging=jar -Dversion=0.1.0 -Dfile=xerces\xercesImpl.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>xercesImpl</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+    <!--mvn install:install-file -DgroupId=align.api -DartifactId=xml-apis -Dpackaging=jar -Dversion=0.1.0 -Dfile=xerces\xml-apis.jar -DgeneratePom=true-->
+    <dependency>
+      <groupId>align.api</groupId>
+      <artifactId>xml-apis</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+        <executions>
+          <execution>
+            <phase>test</phase>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <configuration>
+              <mainClass>uk.rgu.data.ontologyprocessor.word2vec.TFIDFCalculator</mainClass>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <name>Rafcom</name>
+</project>
